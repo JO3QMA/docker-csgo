@@ -1,0 +1,12 @@
+version: "3"
+services: 
+  csgo:
+    build: ./build/
+    user: 1000:1000
+    ports: 
+      - "27015:27015"
+      - "27005:27005"
+    volumes: 
+      - ./data/csgo_server:/home/csgo/csgo_server/
+      #- ./data/cfg/autoexec.cfg:/home/csgo/csgo_server/csgo/autoexec.cfg:ro
+      #- ./data/cfg/server.cfg:/srv/csgo_server/csgo/server.cfg:ro
